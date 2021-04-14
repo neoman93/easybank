@@ -1,3 +1,27 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -58,6 +82,27 @@ a, a:hover, a:visited {
   }
 }
 
+.header.open .overlay {
+  display: block;
+}
+.header.open .burger-menu > span:first-child {
+  transform: rotate(45deg);
+}
+.header.open .burger-menu > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .burger-menu > span:last-child {
+  transform: rotate(-45deg);
+}
+.header .overlay {
+  display: none;
+  position: fixed;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(#2d314d, transparent);
+}
 .header__nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -70,9 +115,11 @@ a, a:hover, a:visited {
   width: 26px;
   height: 2px;
   background-color: #2d314d;
+  transition: all 300ms ease-in-out;
+  transform-origin: 3px 1px;
 }
 .header__burger-menu > span:not(:last-child) {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 .header__links a {
   position: relative;
