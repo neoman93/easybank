@@ -4,10 +4,6 @@
 
   &.open {
 
-    .overlay {
-      display: block;
-    }
-
     .burger-menu {
       > span:first-child {
         transform: rotate(45deg);
@@ -22,13 +18,18 @@
   }
 
   .overlay {
-    display: none;
     position: fixed;
     top: 3.75rem;
     left: 0;
     right: 0;
     bottom: 0;
     background-image: linear-gradient($darkBlue, transparent);
+    visibility: hidden;
+  }
+
+  nav {
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
   }
 
 
@@ -95,6 +96,19 @@
 
     &:hover {
       opacity: 0.75;
+    }
+  }
+
+  &__menu {
+    background: $white;
+    padding: 1.625rem;
+
+
+    a {
+      color: $darkBlue;
+      padding: 0.625rem;
+      display: block;
+      text-align: center;
     }
   }
 

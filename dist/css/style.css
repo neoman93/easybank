@@ -1,8 +1,14 @@
 @keyframes fade-in {
   from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -12,9 +18,15 @@
 
 @keyframes fade-out {
   from {
+    visibility: visible;
     opacity: 1;
   }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
   to {
+    visibility: hidden;
     opacity: 0;
   }
 }
@@ -45,6 +57,11 @@ body {
 
 a, a:hover, a:visited {
   text-decoration: none;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .flex {
@@ -82,9 +99,6 @@ a, a:hover, a:visited {
   }
 }
 
-.header.open .overlay {
-  display: block;
-}
 .header.open .burger-menu > span:first-child {
   transform: rotate(45deg);
 }
@@ -95,13 +109,17 @@ a, a:hover, a:visited {
   transform: rotate(-45deg);
 }
 .header .overlay {
-  display: none;
   position: fixed;
   top: 3.75rem;
   left: 0;
   right: 0;
   bottom: 0;
   background-image: linear-gradient(#2d314d, transparent);
+  visibility: hidden;
+}
+.header nav {
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
 }
 .header__nav {
   padding: 1.0625rem 1.5rem;
@@ -153,5 +171,15 @@ a, a:hover, a:visited {
 }
 .header__cta:hover {
   opacity: 0.75;
+}
+.header__menu {
+  background: white;
+  padding: 1.625rem;
+}
+.header__menu a {
+  color: #2d314d;
+  padding: 0.625rem;
+  display: block;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
