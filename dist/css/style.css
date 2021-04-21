@@ -175,6 +175,12 @@ a, a:hover, a:visited {
 .header__menu {
   background: white;
   padding: 1.625rem;
+  position: absolute;
+  width: calc(100% - 1.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  margin-top: 1.5rem;
 }
 .header__menu a {
   color: #2d314d;
@@ -182,4 +188,3 @@ a, a:hover, a:visited {
   display: block;
   text-align: center;
 }
-/*# sourceMappingURL=style.css.map */
