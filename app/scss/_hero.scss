@@ -1,8 +1,10 @@
 .hero {
 	background-color: $veryLight;
-	@include breakpoint-up(large) {
-		display: flex;
-		align-items: center;
+	.container {
+		@include breakpoint-up(large) {
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	&__image {
@@ -20,6 +22,16 @@
 		&::before {
 			content: "";
 			background: url("../../images/image-mockups.png") center 93% / cover no-repeat;
+			width: 92%;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::after {
+			content: "";
+			background: url("../../images/bg-intro-desktop.svg") center 93% / cover no-repeat;
 			width: 92%;
 			height: 100%;
 			position: absolute;

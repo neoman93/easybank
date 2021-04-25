@@ -318,7 +318,7 @@ a:visited {
 }
 
 @media (min-width: 64em) {
-  .hero {
+  .hero .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -350,6 +350,17 @@ a:visited {
 .hero__image::before {
   content: "";
   background: url("../../images/image-mockups.png") center 93%/cover no-repeat;
+  width: 92%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.hero__image::after {
+  content: "";
+  background: url("../../images/bg-intro-desktop.svg") center 93%/cover no-repeat;
   width: 92%;
   height: 100%;
   position: absolute;
