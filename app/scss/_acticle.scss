@@ -1,0 +1,54 @@
+.articles {
+	background-color: $veryLight;
+}
+.article {
+	// .article__content
+
+	&__content {
+	}
+
+	// .article__item
+
+	&__item {
+	}
+
+	// .article__author
+
+	&__author {
+	}
+
+	// .acticle__grid
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include breakpoint-up(medium) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include breakpoint-up(large) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	// .acticle__image
+
+	&__image {
+	}
+
+	// .acticle__text
+
+	&__text {
+	}
+
+	// .acticle__title
+
+	&__title {
+	}
+
+	// .acticle__intro
+
+	&__intro {
+	}
+}
